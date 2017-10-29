@@ -6,9 +6,16 @@
 :set expandtab
 
 " Plugins
-":execute pathogen#infect()
-":set laststatus=2
+call plug#begin()
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'bling/vim-airline'
+Plug 'scrooloose/nerdcommenter'
+Plug 'valloric/youcompleteme'
+call plug#end()
 
+let g:NERDDefaultAlign = 'left'
+map <leader>cc <leader>c<space>
 " Syntax-specific
 :au FileType java inoremap { {<CR>}<Esc>ko
 
@@ -55,6 +62,7 @@
 :cabbrev o O
 :command W w
 :command Q q
+:cabbrev dir NERDTree
 " :nnoremap <C-J> <C-W><C-J>
 " :nnoremap <C-K> <C-W><C-K>
 " :nnoremap <C-L> <C-W><C-L>
