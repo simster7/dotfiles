@@ -11,7 +11,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'bling/vim-airline'
 Plug 'scrooloose/nerdcommenter'
-Plug 'valloric/youcompleteme'
 call plug#end()
 
 let g:NERDDefaultAlign = 'left'
