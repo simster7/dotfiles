@@ -19,8 +19,8 @@ map <leader>cc <leader>c<space>
 :au FileType java inoremap { {<CR>}<Esc>ko
 
 " Builds
-:au FileType python set makeprg=python3\ %
-:au FileType tex set makeprg=pdftex\ %
+:au FileType python set makeprg=python\ %
+:au FileType tex set makeprg=pdflatex\ %\ &&\ open\ %<.pdf
 :set autowrite
 
 " Vim aesthetics
@@ -28,10 +28,6 @@ map <leader>cc <leader>c<space>
 :set rnu
 :autocmd InsertEnter * :set number | :set nornu
 :autocmd InsertLeave * :set rnu | :set nonumber
-
-" Shortcuts
-:abbr sout System.out.println();<Esc>hi
-:abbr psvm public static void main(String[] args) {
 
 " Easy Motion
 " :nmap / <Plug>(easymotion-sn)
@@ -58,6 +54,7 @@ map <leader>cc <leader>c<space>
 :nnoremap <Tab> :ls<CR>:b
 :noremap * *N
 :command O :CommandT
+:cabbrev smake :silent make
 :cabbrev o O
 :command W w
 :command Q q
@@ -66,3 +63,8 @@ map <leader>cc <leader>c<space>
 " :nnoremap <C-K> <C-W><C-K>
 " :nnoremap <C-L> <C-W><C-L>
 " :nnoremap <C-I> <C-W><C-I>
+"
+" Shortcuts
+:abbr sout System.out.println();<Esc>hi
+:abbr psvm public static void main(String[] args) {
+
