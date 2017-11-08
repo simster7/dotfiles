@@ -11,12 +11,12 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'bling/vim-airline'
 Plug 'scrooloose/nerdcommenter'
+Plug 'easymotion/vim-easymotion'
+Plug 'wellle/targets.vim'
 call plug#end()
 
 let g:NERDDefaultAlign = 'left'
 map <leader>cc <leader>c<space>
-" Syntax-specific
-:au FileType java inoremap { {<CR>}<Esc>ko
 
 " Builds
 :au FileType python set makeprg=python\ %
@@ -30,10 +30,10 @@ map <leader>cc <leader>c<space>
 :autocmd InsertLeave * :set rnu | :set nonumber
 
 " Easy Motion
-" :nmap / <Plug>(easymotion-sn)
-" :nmap ' <Plug>(easymotion-bd-w)
-" :nnoremap j gj
-" :nnoremap k gk
+:nmap / <Plug>(easymotion-sn)
+:nmap ' <Plug>(easymotion-bd-w)
+:nnoremap j gj
+:nnoremap k gk
 
 " Theme
 :set guioptions-=T
@@ -41,21 +41,24 @@ map <leader>cc <leader>c<space>
 :colorscheme gruvbox
 :set background=dark
 
+" Syntax-specific
+:au FileType java inoremap { {<CR>}<Esc>ko
+:au FileType tex inoremap `bf \textbf{
+:au FileType tex inoremap `tt \texttt{
+:au FileType tex inoremap `it \textit{
+:au FileType tex inoremap `nl \newline
+:au FileType tex inoremap `np \newpage
+:au FileType tex inoremap `la $\leftarrow$
+:au FileType tex inoremap `ra $\rightarrow$
+:au FileType tex inoremap `en \begin{enumerate}<CR>\end{enumerate}<ESC>>>O\item 
+:au FileType tex inoremap `fl \begin{flalign*}<CR>\end{flalign*}<ESC>O
+
 " Functionality
-:inoremap `bf \textbf{
-:inoremap `tt \texttt{
-:inoremap `it \textit{
-:inoremap `nl \newline
-:inoremap `np \newpage
-:inoremap `la $\leftarrow$
-:inoremap `ra $\rightarrow$
-:inoremap `en \begin{enumerate}<CR>\end{enumerate}<ESC>>>O\item 
-:inoremap `fl \begin{flalign*}<CR>\end{flalign*}<ESC>O
 :nnoremap <Tab> :ls<CR>:b
 :noremap * *N
 :command O :CommandT
-:cabbrev smake :silent make
-:cabbrev o O
+:cabbrev smake silent make
+:cabbrev chk setlocal spell spelllang=en_us
 :command W w
 :command Q q
 :cabbrev dir NERDTree
