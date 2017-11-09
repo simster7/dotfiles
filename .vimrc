@@ -32,8 +32,8 @@ map <leader>cc <leader>c<space>
 " Easy Motion
 :nmap / <Plug>(easymotion-sn)
 :nmap ' <Plug>(easymotion-bd-w)
-:nnoremap j gj
-:nnoremap k gk
+:noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+:noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 " Theme
 :set guioptions-=T
