@@ -13,6 +13,7 @@ Plug 'bling/vim-airline'
 Plug 'scrooloose/nerdcommenter'
 Plug 'easymotion/vim-easymotion'
 Plug 'wellle/targets.vim'
+Plug 'w0rp/ale'
 call plug#end()
 
 let g:NERDDefaultAlign = 'left'
@@ -51,7 +52,7 @@ map <leader>cc <leader>c<space>
 :au FileType tex inoremap `la $\leftarrow$
 :au FileType tex inoremap `ra $\rightarrow$
 :au FileType tex inoremap `en \begin{enumerate}<CR>\end{enumerate}<ESC>>>O\item 
-:au FileType tex inoremap `fl \begin{flalign*}<CR>\end{flalign*}<ESC>O
+:au FileType tex inoremap `fl \begin{flalign*}<CR>\end{flalign*}<ESC>>>O
 
 " Functionality
 :nnoremap <Tab> :ls<CR>:b
