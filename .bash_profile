@@ -6,7 +6,8 @@ export BROWSER=open
 
 export PS1="[\#]:\W 🌵  "
 
-alias 126="cd ~/Google\ Drive/College/EE126"
-alias 176="cd ~/Google\ Drive/College/CS176"
+alias 189="cd ~/Google\ Drive/College/CS189"
+alias 161="cd ~/Google\ Drive/College/CS161"
+alias 100="cd ~/Google\ Drive/College/CS100"
 alias ls="ls -l"
 alias rm="rm -i"
