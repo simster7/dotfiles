@@ -59,7 +59,10 @@ map <leader>cc <leader>c<space>
 :au FileType tex inoremap `ra $\rightarrow$
 :au FileType tex inoremap `en \begin{enumerate}<CR>\end{enumerate}<ESC>>>O\item 
 :au FileType tex inoremap `mt \begin{bmatrix}<CR>\end{bmatrix}<ESC>>>O
-:au FileType tex inoremap `fl \begin{flalign*}<CR>\end{flalign*}<ESC>>>O
+:au FileType tex inoremap `fl \begin{flalign*}<CR>\end{flalign*}<ESC>O
+:au FileType tex inoremap `al \begin{align*}<CR>\end{align*}<ESC>O
+:au FileType tex inoremap `( \left(
+:au FileType tex inoremap `) \right)
 
 " Functionality
 :nnoremap <Tab> :ls<CR>:b
