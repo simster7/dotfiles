@@ -15,6 +15,10 @@ Plug 'easymotion/vim-easymotion'
 Plug 'wellle/targets.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+" Plug 'airblade/vim-gitgutter'
+" Plug 'vim-syntastic/syntastic'
 " Plug 'w0rp/ale'
 call plug#end()
 
@@ -36,9 +40,15 @@ map <leader>cc <leader>c<space>
 
 " Easy Motion
 :nmap / <Plug>(easymotion-sn)
-:nmap ' <Plug>(easymotion-bd-w)
+" :nmap ' <Plug>(easymotion-bd-w)
 :noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 :noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+
+" fzf
+:noremap ; :Files<CR>
+:noremap ' :BLines<CR>
+:noremap " :Lines<CR>
+:nnoremap <Tab> :Buffers<CR>
 
 " Theme
 :set guioptions-=T
@@ -47,6 +57,14 @@ map <leader>cc <leader>c<space>
 :set background=dark
 :set macligatures
 :set guifont=Fira\ Code:h12
+
+" Splitting
+:set splitbelow
+:set splitright
+:nnoremap <C-J> <C-W><C-J>
+:nnoremap <C-K> <C-W><C-K>
+:nnoremap <C-L> <C-W><C-L>
+:nnoremap <C-H> <C-W><C-H>
 
 " Syntax-specific
 :au FileType java inoremap { {<CR>}<Esc>ko
@@ -65,25 +83,19 @@ map <leader>cc <leader>c<space>
 :au FileType tex inoremap `) \right)
 
 " Functionality
-:nnoremap <Tab> :ls<CR>:b
 :noremap * *N
-:command O :CommandT
 :cabbrev smake silent make
 :cabbrev chk setlocal spell spelllang=en_us
 :command W w
 :command Q q
 :cabbrev dir NERDTreeToggle
-" :nnoremap <C-J> <C-W><C-J>
-" :nnoremap <C-K> <C-W><C-K>
-" :nnoremap <C-L> <C-W><C-L>
-" :nnoremap <C-I> <C-W><C-I>
-
 
 " NERDTree-specific
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+
 " Shortcuts
 :abbr sout System.out.println();<Esc>hi
 :abbr psvm public static void main(String[] args) {
