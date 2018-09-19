@@ -13,6 +13,8 @@ Plug 'bling/vim-airline'
 Plug 'scrooloose/nerdcommenter'
 Plug 'easymotion/vim-easymotion'
 Plug 'wellle/targets.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 " Plug 'w0rp/ale'
 call plug#end()
 
@@ -43,6 +45,8 @@ map <leader>cc <leader>c<space>
 :syntax enable
 :colorscheme gruvbox
 :set background=dark
+:set macligatures
+:set guifont=Fira\ Code:h12
 
 " Syntax-specific
 :au FileType java inoremap { {<CR>}<Esc>ko
@@ -65,12 +69,18 @@ map <leader>cc <leader>c<space>
 :cabbrev chk setlocal spell spelllang=en_us
 :command W w
 :command Q q
-:cabbrev dir NERDTree
+:cabbrev dir NERDTreeToggle
 " :nnoremap <C-J> <C-W><C-J>
 " :nnoremap <C-K> <C-W><C-K>
 " :nnoremap <C-L> <C-W><C-L>
 " :nnoremap <C-I> <C-W><C-I>
-"
+
+
+" NERDTree-specific
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 " Shortcuts
 :abbr sout System.out.println();<Esc>hi
 :abbr psvm public static void main(String[] args) {
