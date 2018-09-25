@@ -27,6 +27,8 @@ set timeoutlen=1000 ttimeoutlen=0
 let g:NERDDefaultAlign = 'left'
 map <leader>cc <leader>c<space>
 
+":autocmd BufEnter * silent! lcd %:p:h
+
 " Builds
 :au FileType python set makeprg=python\ %
 :au FileType tex set makeprg=pdflatex\ %\ &&\ open\ %<.pdf
