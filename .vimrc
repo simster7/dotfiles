@@ -3,6 +3,7 @@
 :set cindent
 :set tabstop=4
 :set shiftwidth=4
+:set smarttab
 :set expandtab
 
 " Plugins
@@ -17,7 +18,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-" Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 " Plug 'vim-syntastic/syntastic'
 " Plug 'w0rp/ale'
 call plug#end()
@@ -27,6 +29,10 @@ set timeoutlen=1000 ttimeoutlen=0
 let g:NERDDefaultAlign = 'left'
 map <leader>cc <leader>c<space>
 
+:set noswapfile
+:set nowb
+:set nobackup
+
 ":autocmd BufEnter * silent! lcd %:p:h
 
 " Builds
@@ -34,23 +40,37 @@ map <leader>cc <leader>c<space>
 :au FileType tex set makeprg=pdflatex\ %\ &&\ open\ %<.pdf
 :set autowrite
 
-" Vim aesthetics
+" Line aesthetics
 :set cursorline
 :set rnu
 :autocmd InsertEnter * :set number | :set nornu
 :autocmd InsertLeave * :set rnu | :set nonumber
 
-" Easy Motion
+" Motion
 :nmap / <Plug>(easymotion-sn)
-" :nmap ' <Plug>(easymotion-bd-w)
+:nmap <space> <Plug>(easymotion-bd-w)
 :noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 :noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+:noremap * *N
+nmap <M-j> mz:m+<cr>`z
+nmap <M-k> mz:m-2<cr>`z
+vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
+vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+if has("mac") || has("macunix")
+  nmap <D-j> <M-j>
+  nmap <D-k> <M-k>
+  vmap <D-j> <M-j>
+  vmap <D-k> <M-k>
+endif
 
 " fzf
 :noremap ; :Files<CR>
 :noremap ' :BLines<CR>
 :noremap " :Lines<CR>
 :nnoremap <Tab> :Buffers<CR>
+
+" GitGutter
+:cabbrev gitgut GitGutterToggle
 
 " Theme
 :set guioptions-=T
@@ -85,18 +105,18 @@ map <leader>cc <leader>c<space>
 :au FileType tex inoremap `) \right)
 
 " Functionality
-:noremap * *N
+:noremap <C-p> :register<CR>:put
 :cabbrev smake silent make
 :cabbrev chk setlocal spell spelllang=en_us
-:command W w
-:command Q q
-:cabbrev dir NERDTreeToggle
+:cabbrev W w
+:cabbrev Q q
+:cabbrev rc e $MYVIMRC
 
-" NERDTree-specific
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+" Automatically source .vimrc file when saving it
+augroup myvimrc
+    au!
+    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC 
+augroup END
 
 " Shortcuts
 :abbr sout System.out.println();<Esc>hi
