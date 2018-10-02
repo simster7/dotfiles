@@ -5,6 +5,15 @@
 :set shiftwidth=4
 :set smarttab
 :set expandtab
+"
+" Theme
+:set guioptions-=T
+:syntax enable
+:colorscheme gruvbox
+:set background=dark
+:set macligatures
+:set guifont=Fira\ Code:h12
+
 
 " Plugins
 call plug#begin()
@@ -64,21 +73,13 @@ if has("mac") || has("macunix")
 endif
 
 " fzf
-:noremap ; :Files<CR>
-:noremap ' :BLines<CR>
-:noremap " :Lines<CR>
+:noremap " :Files<CR>
+:noremap ' :Lines<CR>
+":noremap ' :BLines<CR>
 :nnoremap <Tab> :Buffers<CR>
 
 " GitGutter
 :cabbrev gitgut GitGutterToggle
-
-" Theme
-:set guioptions-=T
-:syntax enable
-:colorscheme gruvbox
-:set background=dark
-:set macligatures
-:set guifont=Fira\ Code:h12
 
 " Splitting
 :set splitbelow
@@ -103,6 +104,9 @@ endif
 :au FileType tex inoremap `al \begin{align*}<CR>\end{align*}<ESC>O
 :au FileType tex inoremap `( \left(
 :au FileType tex inoremap `) \right)
+
+" NERDTree
+:cabbrev dir NERDTreeToggle
 
 " Functionality
 :noremap <C-p> :register<CR>:put
