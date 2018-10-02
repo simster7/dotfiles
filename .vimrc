@@ -41,6 +41,7 @@ map <leader>cc <leader>c<space>
 :set noswapfile
 :set nowb
 :set nobackup
+:set clipboard=unnamed
 
 ":autocmd BufEnter * silent! lcd %:p:h
 
