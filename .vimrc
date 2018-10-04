@@ -29,6 +29,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+" Plug 'justinmk/vim-sneak'
 " Plug 'vim-syntastic/syntastic'
 " Plug 'w0rp/ale'
 call plug#end()
@@ -58,7 +59,8 @@ map <leader>cc <leader>c<space>
 
 " Motion
 :nmap / <Plug>(easymotion-sn)
-:nmap <space> <Plug>(easymotion-bd-w)
+":nmap <space> <Plug>(easymotion-bd-w)
+nmap <space> <Plug>(easymotion-s2)
 :noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 :noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 :noremap * *N
