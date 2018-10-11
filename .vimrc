@@ -110,6 +110,7 @@ endif
 
 " NERDTree
 :cabbrev dir NERDTreeToggle
+:cabbrev cdir NERDTreeFind
 
 " Functionality
 :noremap <C-p> :register<CR>:put
