@@ -109,8 +109,8 @@ endif
 :au FileType tex inoremap `) \right)
 
 " NERDTree
-:cabbrev dir NERDTreeToggle
-:cabbrev cdir NERDTreeFind
+:cabbrev tdir NERDTreeToggle
+:cabbrev dir NERDTreeFind
 
 " Functionality
 :noremap <C-p> :register<CR>:put
