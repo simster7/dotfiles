@@ -7,10 +7,6 @@ export BROWSER=open
 export PS1="[\#]:\W 🌵  "
 
 alias 1and1="ssh u51743908@home268846302.1and1-data.host"
-alias 189="cd ~/Google\ Drive/College/CS189"
-alias 161="cd ~/Google\ Drive/College/CS161"
-alias 100="cd ~/Google\ Drive/College/CS100"
-alias hs="ssh cs161-ate@hive23.cs.berkeley.edu"
 alias ls="ls -l"
 alias rm="rm -i"
 
