@@ -5,15 +5,13 @@
 :set shiftwidth=4
 :set smarttab
 :set expandtab
-"
+
 " Theme
 :set guioptions-=T
 :syntax enable
 :colorscheme gruvbox
 :set background=dark
-:set macligatures
 :set guifont=Fira\ Code:h12
-
 
 " Plugins
 call plug#begin()
@@ -33,18 +31,21 @@ Plug 'tpope/vim-fugitive'
 " Plug 'vim-syntastic/syntastic'
 " Plug 'w0rp/ale'
 call plug#end()
+set tags=tags
 
+" Flat out forgot what this does
 set timeoutlen=1000 ttimeoutlen=0
 
 let g:NERDDefaultAlign = 'left'
-map <leader>cc <leader>c<space>
+map <C-_> <leader>c<space>
 
-:set noswapfile
-:set nowb
-:set nobackup
-:set clipboard=unnamed
-
-":autocmd BufEnter * silent! lcd %:p:h
+" No swapfiles
+set noswapfile
+set nowb
+set nobackup
+"
+" Use system keyboard
+set clipboard=unnamed
 
 " Builds
 :au FileType python set makeprg=python\ %
@@ -73,6 +74,7 @@ if has("mac") || has("macunix")
   nmap <D-k> <M-k>
   vmap <D-j> <M-j>
   vmap <D-k> <M-k>
+  set macligatures
 endif
 
 " fzf
@@ -128,5 +130,6 @@ augroup END
 
 " Shortcuts
 :abbr sout System.out.println();<Esc>hi
+:abbr clog console.log();<Esc>hi
 :abbr psvm public static void main(String[] args) {
 
