@@ -13,7 +13,7 @@ set noshowmode
 set noshowcmd
 set spell
 set textwidth=66
-set formatoptions=tacqwn
+"set formatoptions=tacqwn
 
 set noswapfile
 set nowb
