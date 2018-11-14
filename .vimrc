@@ -27,6 +27,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/goyo.vim'
 " Plug 'justinmk/vim-sneak'
 " Plug 'vim-syntastic/syntastic'
 " Plug 'w0rp/ale'

@@ -11,6 +11,8 @@ alias ls="ls -l"
 alias rm="rm -i"
 
 alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
+alias wvim="mvim -N -u ~/.write.vimrc -c 'Goyo'"
+
 alias qbo="export JAVAROOT=`/usr/libexec/java_home`;. /Users/sbeharyutk/dev/qbo/src/build/bin/qbo.env; /Users/sbeharyutk/dev/ecosystem-docker/start.sh"
 
 alias bike="python ~/Documents/Scripts/ebikes.py"
