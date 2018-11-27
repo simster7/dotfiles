@@ -14,7 +14,8 @@ set guifont=Menlo:h14
 set noshowmode
 set noshowcmd
 set spell
-set textwidth=66
+set textwidth=0
+set wrapmargin=0
 
 set noswapfile
 set nowb
