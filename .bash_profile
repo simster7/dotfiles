@@ -7,8 +7,10 @@ export BROWSER=open
 export PS1="[\#]:\W 🌵  "
 
 alias 1and1="ssh u51743908@home268846302.1and1-data.host"
+
 alias ls="ls -l"
 alias rm="rm -i"
+#alias ag="ag --nocolor"
 
 alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
 alias wvim="mvim -N -u ~/.write.vimrc -c 'Goyo'"
@@ -25,3 +27,6 @@ export NVM_DIR="$HOME/.nvm"
 if [ -f ~/.bashrc ]; then
     source ~/.bashrc
 fi
+
+# added by Miniconda3 4.5.11 installer
+export PATH="/miniconda3/bin:$PATH"

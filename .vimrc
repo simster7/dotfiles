@@ -11,7 +11,7 @@ set guioptions-=T
 syntax enable
 colorscheme gruvbox
 set background=dark
-"set guifont=Fira\ 
+"set guifont=Fira\
 
 " Plugins
 call plug#begin()
@@ -82,11 +82,12 @@ endif
 nmap <C-m> <Plug>NERDCommenterToggle
 
 " fzf
-noremap " :Files<CR>
-noremap ' :Lines<CR>
+" noremap " :Files<CR>
+noremap ' :Ag<CR>
+command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, '--nocolor', <bang>0)
 ":noremap ' :BLines<CR>
 nnoremap <Tab> :Buffers<CR>
-
+"
 " GitGutter
 cabbrev gitgut GitGutterToggle
 
@@ -129,7 +130,7 @@ cabbrev rc e $MYVIMRC
 " Automatically source .vimrc file when saving it
 augroup myvimrc
     au!
-    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC 
+    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC
 augroup END
 
 " Shortcuts
