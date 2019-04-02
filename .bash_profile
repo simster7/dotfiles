@@ -16,6 +16,8 @@ alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
 alias wvim="mvim -N -u ~/.write.vimrc -c 'Goyo'"
 
 alias qbo="export JAVAROOT=`/usr/libexec/java_home`;. /Users/sbeharyutk/dev/qbo/src/build/bin/qbo.env; /Users/sbeharyutk/dev/ecosystem-docker/start.sh"
+alias ktlq="kubectl --kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins\@accounting-core-qbo-iks-usw2-ppd-qal"
+alias ktlp="kubectl --kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins@accounting-accountingcore-qbomonolith-usw2-ppd-pr"
 
 alias bike="python ~/Documents/Scripts/ebikes.py"
 alias wbike="python ~/Documents/Scripts/ebikes.py -w"
