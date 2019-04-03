@@ -9,7 +9,7 @@ set expandtab
 " Theme
 set guioptions-=T
 syntax enable
-colorscheme gruvbox
+colorscheme outrun
 set background=dark
 "set guifont=Fira\
 
