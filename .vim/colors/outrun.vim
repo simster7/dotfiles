@@ -104,7 +104,7 @@ let s:gb.light0_soft = ['#FFFFD8', 230]     " 242-229-188
 let s:gb.light1      = ['#E6E6C2', 187]     " 235-219-178 NEW
 let s:gb.light2      = ['#CCCCAD', 187]     " 213-196-161 NEW
 let s:gb.light3      = ['#B3B397', 144]     " 189-174-147 NEW
-let s:gb.light4      = ['#BD93F9', 246]     " 168-153-132 NEW
+let s:gb.light4      = ['#999982', 246]     " 168-153-132 NEW
 let s:gb.light4_256  = ['#999982', 246]     " 168-153-132 NEW
 
 "let s:gb.bright_red     = ['#FF5555', 167]     " 251-73-52
@@ -117,11 +117,11 @@ let s:gb.light4_256  = ['#999982', 246]     " 168-153-132 NEW
 
 let s:gb.bright_red     = ['#FD1D53', 197]     " 251-73-52 NEW
 let s:gb.bright_green   = ['#50FA7B', 84 ]     " 184-187-38 NEW
-let s:gb.bright_yellow  = ['#FFFA50', 228]     " 250-189-47 NEW
+let s:gb.bright_yellow  = ['#FFC4E8', 228]     " 250-189-47 NEW
 let s:gb.bright_blue    = ['#2BDCFF', 141]     " 131-165-152 NEW
 let s:gb.bright_purple  = ['#BD93F9', 212]     " 211-134-155 NEW
 let s:gb.bright_aqua    = ['#BDF3FF', 117]     " 142-192-124 NEW
-let s:gb.bright_orange  = ['#FD947C', 255]     " 254-128-25 NEW
+let s:gb.bright_orange  = ['#FF78B1', 255]     " 254-128-25 NEW
 
 let s:gb.neutral_red    = ['#FF5555', 197]     " 204-36-29 NEW
 let s:gb.neutral_green  = ['#50FA7B', 84 ]     " 152-151-26 NEW
