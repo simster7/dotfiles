@@ -6,18 +6,12 @@ set shiftwidth=4
 set smarttab
 set expandtab
 
-" Theme
-set guioptions-=T
-syntax enable
-colorscheme outrun
-set background=dark
-"set guifont=Fira\
-
 " Plugins
 call plug#begin()
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdcommenter'
 Plug 'easymotion/vim-easymotion'
 Plug 'wellle/targets.vim'
@@ -35,6 +29,14 @@ Plug 'martinda/Jenkinsfile-vim-syntax'
 " Plug 'w0rp/ale'
 call plug#end()
 set tags=tags
+
+" Theme
+set guioptions-=T
+syntax enable
+colorscheme outrun
+set background=dark
+"set guifont=Fira\
+
 
 " Flat out forgot what this does
 set timeoutlen=1000 ttimeoutlen=0
