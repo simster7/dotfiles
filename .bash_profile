@@ -20,8 +20,8 @@ alias ktlq="kubectl --kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins\@acco
 alias ktlp="kubectl --kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins@accounting-accountingcore-qbomonolith-usw2-ppd-pr"
 alias ktle="kubectl --kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins@accounting-core-qbo-iks-usw2-ppd-e2e"
 
-alias mergd="echo `git rev-parse --abbrev-ref HEAD` | xargs -I {}  sh -c '[[ {} != \"develop\" ]] && git checkout develop && git branch -d {}'"
-alias mergm="echo `git rev-parse --abbrev-ref HEAD` | xargs -I {}  sh -c '[[ {} != \"master\" ]] && git checkout master && git branch -d {}'"
+alias mergd="echo `git rev-parse --abbrev-ref HEAD` | xargs -I {}  sh -c '[[ {} != \"develop\" ]] && git checkout develop && git branch -d {}' && git pull"
+alias mergm="echo `git rev-parse --abbrev-ref HEAD` | xargs -I {}  sh -c '[[ {} != \"master\" ]] && git checkout master && git branch -d {}' && git pull"
 
 alias bike="python ~/Documents/Scripts/ebikes.py"
 alias wbike="python ~/Documents/Scripts/ebikes.py -w"
