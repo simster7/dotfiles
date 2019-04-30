@@ -18,6 +18,10 @@ alias wvim="mvim -N -u ~/.write.vimrc -c 'Goyo'"
 alias qbo="export JAVAROOT=`/usr/libexec/java_home`;. /Users/sbeharyutk/dev/qbo/src/build/bin/qbo.env; /Users/sbeharyutk/dev/ecosystem-docker/start.sh"
 alias ktlq="kubectl --kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins\@accounting-core-qbo-iks-usw2-ppd-qal"
 alias ktlp="kubectl --kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins@accounting-accountingcore-qbomonolith-usw2-ppd-pr"
+alias ktle="kubectl --kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins@accounting-core-qbo-iks-usw2-ppd-e2e"
+
+alias mergd="echo `git rev-parse --abbrev-ref HEAD` | xargs -I {}  sh -c '[[ {} != \"develop\" ]] && git checkout develop && git branch -d {}'"
+alias mergm="echo `git rev-parse --abbrev-ref HEAD` | xargs -I {}  sh -c '[[ {} != \"master\" ]] && git checkout master && git branch -d {}'"
 
 alias bike="python ~/Documents/Scripts/ebikes.py"
 alias wbike="python ~/Documents/Scripts/ebikes.py -w"
@@ -32,3 +36,5 @@ fi
 
 # added by Miniconda3 4.5.11 installer
 export PATH="/miniconda3/bin:$PATH"
+export GOPATH=~/go
+export PATH="$GOPATH/bin:$PATH"

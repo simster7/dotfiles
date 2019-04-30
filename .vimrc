@@ -56,6 +56,9 @@ au FileType python set makeprg=python\ %
 au FileType tex set makeprg=pdflatex\ %\ &&\ open\ %<.pdf
 set autowrite
 
+" File type aesthetics
+au FileType yaml setlocal ts=2 sw=2 expandtab
+
 " Line aesthetics
 set cursorline
 set rnu
