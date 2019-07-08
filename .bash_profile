@@ -30,6 +30,6 @@ alias wvim="mvim -N -u ~/.write.vimrc -c 'Goyo'"
 alias merged="echo `git rev-parse --abbrev-ref HEAD` | xargs -I {}  sh -c '[[ {} != \"master\" ]] && git checkout master && git branch -d {}' && git pull"
 
 # Profile extensions
-if [ -f ~/.work ]; then
+if [ -f ~/._work ]; then
     source ~/.work_bash_profile
 fi
