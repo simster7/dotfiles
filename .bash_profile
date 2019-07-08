@@ -31,5 +31,5 @@ alias merged="echo `git rev-parse --abbrev-ref HEAD` | xargs -I {}  sh -c '[[ {}
 
 # Profile extensions
 if [ -f ~/._work ]; then
-    source ~/.work_bash_profile
+    source ~/.work.bash_profile
 fi

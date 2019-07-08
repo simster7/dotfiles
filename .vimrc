@@ -7,27 +7,29 @@ set smarttab
 set expandtab
 
 " Plugins
-call plug#begin()
-Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-surround'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'scrooloose/nerdcommenter'
-Plug 'easymotion/vim-easymotion'
-Plug 'wellle/targets.vim'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-Plug 'martinda/Jenkinsfile-vim-syntax'
-" Plug 'justinmk/vim-sneak'
-" Plug 'vim-syntastic/syntastic'
-" Plug 'w0rp/ale'
-call plug#end()
+if exists('Plug')
+    call plug#begin()
+    Plug 'scrooloose/nerdtree'
+    Plug 'tpope/vim-surround'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'scrooloose/nerdcommenter'
+    Plug 'easymotion/vim-easymotion'
+    Plug 'wellle/targets.vim'
+    Plug 'leafgarland/typescript-vim'
+    Plug 'peitalin/vim-jsx-typescript'
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    Plug 'junegunn/fzf.vim'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'tpope/vim-fugitive'
+    Plug 'junegunn/goyo.vim'
+    Plug 'junegunn/limelight.vim'
+    Plug 'martinda/Jenkinsfile-vim-syntax'
+    " Plug 'justinmk/vim-sneak'
+    " Plug 'vim-syntastic/syntastic'
+    " Plug 'w0rp/ale'
+    call plug#end()
+endif
 set tags=tags
 
 " Theme
@@ -36,7 +38,6 @@ syntax enable
 colorscheme outrun
 set background=dark
 "set guifont=Fira\
-
 
 " Flat out forgot what this does
 set timeoutlen=1000 ttimeoutlen=0
