@@ -29,6 +29,14 @@ alias wvim="mvim -N -u ~/.write.vimrc -c 'Goyo'"
 # TODO: Extract this into a function
 alias merged="echo `git rev-parse --abbrev-ref HEAD` | xargs -I {}  sh -c '[[ {} != \"master\" ]] && git checkout master && git branch -d {}' && git pull"
 
+function cal {
+    if [[ "$1" =~ ^[A-Za-z]+$ && "$#" == 1 ]]; then
+        /usr/bin/cal "$1" `date +'%Y'`
+    else
+        /usr/bin/cal "$@"
+    fi
+}
+
 # Profile extensions
 if [ -f ~/._work ]; then
     source ~/.work.bash_profile
