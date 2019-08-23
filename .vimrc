@@ -87,7 +87,7 @@ endif
 nmap <C-m> <Plug>NERDCommenterToggle
 
 " fzf
-" noremap " :Files<CR>
+noremap " :Files<CR>
 noremap ' :Ag<CR>
 command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, '--nocolor', <bang>0)
 ":noremap ' :BLines<CR>
