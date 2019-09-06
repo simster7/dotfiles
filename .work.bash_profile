@@ -2,13 +2,18 @@ alias qbo='cd $HOME/dev/qbo/src/qbo; $HOME/dev/ecosystem-docker/start.sh'
 
 function ktl {
 
-C17="--kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins@accounting-core-qbo-c17-usw2-ppd-qal"
-C16="--kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins@accounting-core-qbo-c16-usw2-ppd-qal"
+C1="--kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins@accounting-core-qbo-c1-usw2-ppd-qal"
 C15="--kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins@accounting-core-qbo-c15-usw2-ppd-qal"
+C16="--kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins@accounting-core-qbo-c16-usw2-ppd-qal"
+C17="--kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins@accounting-core-qbo-c17-usw2-ppd-qal"
+C52="--kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins@accounting-core-qbo-c52-usw2-prd-prod"
 PR="--kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins@accounting-accountingcore-qbomonolith-usw2-ppd-pr"
 E2E="--kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins@accounting-core-qbo-iks-usw2-ppd-e2e"
 
     case $1 in
+        "c1")
+            kubeconfig="$C1"
+            ;;
         "c15")
             kubeconfig="$C15"
             ;;
@@ -17,6 +22,9 @@ E2E="--kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins@accounting-core-qbo-
             ;;
         "c17")
             kubeconfig="$C17"
+            ;;
+        "c52")
+            kubeconfig="$C52"
             ;;
         "pr")
             kubeconfig="$PR"
