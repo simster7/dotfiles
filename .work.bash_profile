@@ -3,6 +3,8 @@ alias qbo='cd $HOME/dev/qbo/src/qbo; $HOME/dev/ecosystem-docker/start.sh'
 function ktl {
 
 C1="--kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins@accounting-core-qbo-c1-usw2-ppd-qal"
+C6="--kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins@accounting-core-qbo-c6-usw2-ppd-perf"
+C9="--kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins@accounting-core-qbo-c9-usw2-ppd-perf"
 C15="--kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins@accounting-core-qbo-c15-usw2-ppd-qal"
 C16="--kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins@accounting-core-qbo-c16-usw2-ppd-qal"
 C17="--kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins@accounting-core-qbo-c17-usw2-ppd-qal"
@@ -13,6 +15,12 @@ E2E="--kubeconfig=/Users/sbeharyutk/.kube/kubeconfig/admins@accounting-core-qbo-
     case $1 in
         "c1")
             kubeconfig="$C1"
+            ;;
+        "c6")
+            kubeconfig="$C6"
+            ;;
+        "c9")
+            kubeconfig="$C9"
             ;;
         "c15")
             kubeconfig="$C15"

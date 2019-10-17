@@ -23,7 +23,7 @@ alias so="source ~/.bash_profile"
 alias rc="vim ~/.bash_profile"
 alias ls="ls -l"
 alias rm="rm -i"
-alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
+# alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
 alias wvim="mvim -N -u ~/.write.vimrc -c 'Goyo'"
 #alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
 
