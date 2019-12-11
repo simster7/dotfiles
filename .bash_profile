@@ -1,4 +1,3 @@
-
 # Settings
 export PS1="[\#]:\W 🌵  "
 export BROWSER=open
