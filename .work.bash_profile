@@ -1,3 +1,6 @@
+
+function pl { kubectl logs $1 -c ${2:-main}; }
+
 alias qbo='cd $HOME/dev/qbo/src/qbo; $HOME/dev/ecosystem-docker/start.sh'
 
 function ktl {
