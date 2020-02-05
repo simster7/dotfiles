@@ -5,7 +5,6 @@ export BROWSER=open
 # Paths
 export GOPATH=~/go
 export PATH="/Users/simonbehar/anaconda3/bin:$PATH"
-# export PATH="/miniconda3/bin:$PATH"  # commented out by conda initialize
 export PATH="$GOPATH/bin:$PATH"
 
 # Extensions
@@ -21,6 +20,8 @@ alias 1and1="ssh u51743908@home268846302.1and1-data.host"
 alias so="source ~/.bash_profile"
 alias rc="vim ~/.bash_profile"
 alias ls="ls -l"
+alias wf="cd ~/go/src/github.com/argoproj/argo"
+alias acd="cd ~/go/src/github.com/argoproj/argo-cd"
 alias rm="rm -i"
 # alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
 alias wvim="mvim -N -u ~/.write.vimrc -c 'Goyo'"
