@@ -16,6 +16,7 @@ if [ -x "$(command -v thefuck)" ]; then
 fi
 
 # Aliases
+alias k="kubectl"
 alias 1and1="ssh u51743908@home268846302.1and1-data.host"
 alias so="source ~/.bash_profile"
 alias rc="vim ~/.bash_profile"
