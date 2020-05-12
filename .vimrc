@@ -33,7 +33,7 @@ set tags=tags
 " Theme
 set guioptions-=T
 syntax enable
-colorscheme outrun
+colorscheme gruvbox
 set background=dark
 "set guifont=Fira\
 

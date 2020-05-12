@@ -17,6 +17,7 @@ fi
 
 # Aliases
 alias k="kubectl"
+alias kns="kubens"
 alias 1and1="ssh u51743908@home268846302.1and1-data.host"
 alias so="source ~/.bash_profile"
 alias rc="vim ~/.bash_profile"
@@ -24,6 +25,7 @@ alias ls="ls -l"
 alias wf="cd ~/go/src/github.com/argoproj/argo"
 alias acd="cd ~/go/src/github.com/argoproj/argo-cd"
 alias rm="rm -i"
+alias comp="docker run -ti -v ~/learn/compilers/assignments/:/usr/class/cs143/assignments simbeh7/compilers"
 # alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
 alias wvim="mvim -N -u ~/.write.vimrc -c 'Goyo'"
 #alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
@@ -58,4 +60,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash" || true
 
