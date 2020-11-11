@@ -24,9 +24,7 @@ alias rc="vim ~/.bash_profile"
 alias ls="ls -l"
 alias rm="rm -i"
 alias comp="docker run -ti -v ~/learn/compilers/assignments/:/usr/class/cs143/assignments simbeh7/compilers"
-# alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
 alias wvim="mvim -N -u ~/.write.vimrc -c 'Goyo'"
-#alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
 
 # TODO: Extract this into a function
 alias merged="echo `git rev-parse --abbrev-ref HEAD` | xargs -I {}  sh -c '[[ {} != \"master\" ]] && git checkout master && git branch -d {}' && git pull"
