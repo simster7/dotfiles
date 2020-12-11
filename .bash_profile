@@ -29,6 +29,7 @@ alias wvim="mvim -N -u ~/.write.vimrc -c 'Goyo'"
 # TODO: Extract this into a function
 alias merged="echo `git rev-parse --abbrev-ref HEAD` | xargs -I {}  sh -c '[[ {} != \"master\" ]] && git checkout master && git branch -d {}' && git pull"
 
+# If only month is passed, fill in current year
 function cal {
     if [[ "$1" =~ ^[A-Za-z]+$ && "$#" == 1 ]]; then
         /usr/bin/cal "$1" `date +'%Y'`
@@ -56,7 +57,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash" || true
 
